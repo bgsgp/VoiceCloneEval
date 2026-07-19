@@ -110,7 +110,7 @@ pip install onnxruntime
 
 ### Q3：提示 “Could not create share link”？
 
-这是 Gradio 公网分享功能需要下载 `frpc` 文件。可忽略，本地访问不受影响。如需公网链接，请手动下载 `frpc_windows_amd64_v0.3` 并放入 `~/.cache/huggingface/gradio/frpc/` 目录。
+这是 Gradio 公网分享功能需要下载 `frpc` 文件。可忽略，本地访问不受影响。如需公网链接，请手动将 `frpc_windows_amd64_v0.3` 并放入 `~/.cache/huggingface/gradio/frpc/` 目录。
 
 ### Q4：评估结果中的 "Error-ERR" 是什么？
 
