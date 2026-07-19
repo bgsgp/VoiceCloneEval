@@ -33,7 +33,16 @@
 ### 1. 克隆仓库
 
 ```bash
+# HTTPS
 git clone https://github.com/bgsgp/VoiceCloneEval.git
+
+# SSH（推荐）
+git clone git@github.com:bgsgp/VoiceCloneEval.git
+```
+
+进入项目目录：
+
+```bash
 cd VoiceCloneEval
 ```
 
@@ -110,7 +119,19 @@ pip install onnxruntime
 
 ### Q3：提示 “Could not create share link”？
 
-这是 Gradio 公网分享功能需要下载 `frpc` 文件。可忽略，本地访问不受影响。如需公网链接，请手动将 `frpc_windows_amd64_v0.3` 并放入 `~/.cache/huggingface/gradio/frpc/` 目录。
+这是因为 Gradio 公网分享功能需要下载 `frpc` 文件。本工具默认使用 **`share=False`**，因此该提示**不会出现**，且本地访问完全不受影响。
+
+**建议不要开启公网链接（`share=True`）**，因为：
+- 首次启动需要下载 `frpc` 文件，可能因网络问题卡住
+- 会显著拖慢启动速度
+- 绝大多数使用场景仅需本地访问即可
+
+如果你确实有公网分享需求，请按以下步骤操作：
+
+1. 下载本仓库中的 `frpc_windows_amd64_v0.3` 文件
+2. 将其放入 `~/.cache/huggingface/gradio/frpc/` 目录
+3. 将脚本末尾的 `demo.launch(share=False, pwa=True, css=CUSTOM_CSS)` 改为 `demo.launch(share=True, pwa=True, css=CUSTOM_CSS)`
+4. 重新运行脚本即可生成公网链接
 
 ### Q4：评估结果中的 "Error-ERR" 是什么？
 
@@ -129,8 +150,7 @@ pip install onnxruntime
 ├── eval_voice_multi.py    # 主程序
 ├── requirements.txt       # 依赖列表
 ├── README.md              # 项目文档
-├── LICENSE                # MIT License
-└── screenshot.png         # 界面截图（可替换）
+└── LICENSE                # MIT License
 ```
 
 ---
@@ -164,6 +184,14 @@ pip install onnxruntime
 
 ---
 
-## 📧 联系
+## 📬 联系方式
 
-如有问题，请提 [Issue](https://github.com/bgsgp/VoiceCloneEval/issues)。
+- **官方页面**：[https://bggp.dpdns.org/1/vce/](https://bggp.dpdns.org/1/vce/)
+- **SSH 地址**：`git@github.com:bgsgp/VoiceCloneEval.git`
+- **问题反馈**：欢迎在仓库提交 [Issue](https://github.com/bgsgp/VoiceCloneEval/issues)
+
+---
+
+<p align="center" style="color: #888; font-size: 13px;">
+© 2026 丐帮集团第一院 · 物理版象棋开发与研究院™
+</p>
