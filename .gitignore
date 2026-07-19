@@ -1,0 +1,5 @@
+# 排除截图
+screenshot.png
+
+# 排除 Gradio 公网链接组件
+frpc_windows_amd64_v0.3
