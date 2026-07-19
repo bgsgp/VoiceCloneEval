@@ -187,7 +187,6 @@ pip install onnxruntime
 ## 📬 联系方式
 
 - **官方页面**：[https://bggp.dpdns.org/1/vce/](https://bggp.dpdns.org/1/vce/)
-- **SSH 地址**：`git@github.com:bgsgp/VoiceCloneEval.git`
 - **问题反馈**：欢迎在仓库提交 [Issue](https://github.com/bgsgp/VoiceCloneEval/issues)
 
 ---
