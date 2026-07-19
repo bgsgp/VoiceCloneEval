@@ -1,0 +1,12 @@
+# 核心依赖
+gradio>=6.0.0        # Web 界面框架
+numpy>=1.24.0        # 数值计算
+pandas>=2.0.0        # 数据表格处理
+matplotlib>=3.7.0    # 雷达图绘制
+
+# 音色相似度（Resemblyzer 会自动安装 PyTorch、librosa 等）
+resemblyzer>=0.1.4
+
+# DNSMOS 评估（会自动安装 onnxruntime，此处显式声明确保版本）
+speechmos>=0.0.1.1
+onnxruntime>=1.15.0  # speechmos 的底层推理引擎
