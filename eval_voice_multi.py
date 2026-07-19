@@ -341,7 +341,7 @@ with gr.Blocks(title=f"克隆音频综合评估 v{VERSION}") as demo:
     # 版本号固定灰色 #888
     gr.HTML(f"""
     <div style="text-align: center; font-size: 2em; font-weight: bold; margin-bottom: 10px; color:var(--text-primary);">
-        🎤 克隆音频综合评估 <span style="font-size: 0.6em; color: #888;">({VERSION})</span>
+        🎤 克隆音频综合评估 <span style="font-size: 0.6em; color: #888;">(v{VERSION})</span>
     </div>
     """)
     gr.HTML("""
@@ -375,4 +375,4 @@ with gr.Blocks(title=f"克隆音频综合评估 v{VERSION}") as demo:
     )
 
 if __name__ == "__main__":
-    demo.launch(share=True, pwa=True, css=CUSTOM_CSS)
+    demo.launch(share=False, pwa=True, css=CUSTOM_CSS)
