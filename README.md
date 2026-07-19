@@ -1,6 +1,6 @@
-# 🎤 克隆音频综合评估工具
+# 🎤 VoiceCloneEval — 克隆音频综合评估工具
 
-> 一键评估 AI 克隆音频的音色相似度 + 多维度自然度 (DNSMOS)，生成雷达图与评级报告。
+> 一键评估 AI 克隆语音的音色相似度 + 多维度自然度 (DNSMOS)，生成雷达图与评级报告，支持多文件批量对比。
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
 [![Gradio](https://img.shields.io/badge/Gradio-6.0%2B-orange)](https://gradio.app/)
@@ -10,7 +10,7 @@
 
 ## 📌 项目简介
 
-本工具用于**评估 AI 克隆语音（如 GPT-SoVITS、RVC 等）与原始参考人声的相似度**，并给出**多维度自然度评分**。它整合了：
+本工具用于**评估 AI 克隆语音（如 GPT-SoVITS、RVC、Fish-Speech 等）与原始参考人声的相似度**，并给出**多维度自然度评分**。它整合了：
 
 - **音色相似度**：基于 Resemblyzer 提取说话人嵌入向量的余弦相似度
 - **自然度 / 音质**：DNSMOS 四项指标（OVRL、SIG、BAK、P808）
@@ -26,8 +26,6 @@
 
 ![界面示例](screenshot.png)
 
-*（请替换为实际截图）*
-
 ---
 
 ## 🚀 快速开始
@@ -35,31 +33,25 @@
 ### 1. 克隆仓库
 
 ```bash
-git clone https://github.com/yourname/voice-clone-eval.git
-cd voice-clone-eval
+git clone https://github.com/bgsgp/VoiceCloneEval.git
+cd VoiceCloneEval
 ```
 
 ### 2. 安装依赖
 
-建议使用虚拟环境（venv / conda）：
+建议使用虚拟环境：
 
 ```bash
+# 创建虚拟环境（可选）
+python -m venv venv
+# Windows:
+venv\Scripts\activate
+# Linux/Mac:
+source venv/bin/activate
+
+# 安装依赖
 pip install -r requirements.txt
 ```
-
-**requirements.txt 内容**（如果未提供，手动安装以下库）：
-
-```
-gradio>=6.0.0
-numpy>=1.24.0
-pandas>=2.0.0
-matplotlib>=3.7.0
-resemblyzer>=0.1.4
-speechmos>=0.0.1.1
-onnxruntime>=1.15.0
-```
-
-> ⚠️ **注意**：`speechmos` 需要 `onnxruntime` 支持，请确保安装。
 
 ### 3. 运行
 
@@ -67,7 +59,7 @@ onnxruntime>=1.15.0
 python eval_voice_multi.py
 ```
 
-浏览器自动打开 `http://127.0.0.1:7860`。
+浏览器会自动打开 `http://127.0.0.1:7860`。
 
 ---
 
@@ -174,4 +166,4 @@ pip install onnxruntime
 
 ## 📧 联系
 
-如有问题，请提 [Issue](https://github.com/yourname/voice-clone-eval/issues) 或邮件联系。
+如有问题，请提 [Issue](https://github.com/bgsgp/VoiceCloneEval/issues)。
